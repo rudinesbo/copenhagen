@@ -26,7 +26,13 @@ export default function MapComponent({ data }) {
 
   return (
     <div className="map-container">
-      <Map height={300} width={"50%"} center={center} zoom={zoom}>
+      <Map
+        height={300}
+        width={"50vw"}
+        center={center}
+        zoom={zoom}
+        zoomSnap={false}
+      >
         {data.map(({ geometry, properties, id }) => (
           <Marker
             key={id}

@@ -3,9 +3,16 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div>
-      <p>Home</p>
-      <Link to="/toilets">Toilets</Link>
+    <div className="home">
+      <h1 className="header">COPENHAGEN</h1>
+      <Link to="/toilets" className="left-arrow arrow noselect"></Link>
+      <Link to="/toilets" className="toilets-link">
+        Toilets
+      </Link>
+      <Link to="/weather" className="weather-link">
+        Weather
+      </Link>
+      <Link to="/weather" className="right-arrow arrow noselect"></Link>
     </div>
   );
 }

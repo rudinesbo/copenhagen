@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
+import { Link } from "react-router-dom";
 
 import MapComponent from "./MapComponent";
 
@@ -13,9 +14,20 @@ export default function Toilets() {
   if (isLoading) return "Loading...";
 
   if (error) return "Error" + error.data;
+
   return (
-    <div>
-      <MapComponent data={data.features} />
+    <div className="map-container">
+      <div className="billboard">
+        <MapComponent data={data.features} />
+      </div>
+      <p>
+        Inneholder data, som er stillet til rådighet af en af
+        medlemsorganisationene i Open Data DK
+      </p>
+      <Link to="/" className="right-arrow arrow noselect"></Link>
+      <Link to="/" className="weather-link">
+        Home
+      </Link>
     </div>
   );
 }
