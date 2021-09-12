@@ -1,23 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { CSSTransition } from "react-transition-group";
 import "./App.css";
 
 import Home from "./components/Home";
 import Toilets from "./components/Toilets";
-import PageNotFound from "./components/PageNotFound";
 import Weather from "./components/Weather";
 import background from "./media/copenhagen_street_16_9.jpg";
 
 const queryClient = new QueryClient();
-
-// const routes = [
-//   { path: '/', Component: Home }
-//   { path: '/toilets', Component: Toilets }
-//   { path: '/weather', Component: Weather }
-//   { path: '', Component: PageNotFound }
-// ]
 
 export default function App() {
   return (
@@ -71,7 +63,6 @@ export default function App() {
               </CSSTransition>
             )}
           </Route>
-          {/* <Route component={PageNotFound} /> */}
         </div>
       </Router>
     </QueryClientProvider>

@@ -2,6 +2,8 @@ import React from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 
+import loadingImage from "../media/bike-animated.gif";
+
 const today = new Date().getDay();
 const dayMapping = {
   0: "Sun",
@@ -20,7 +22,12 @@ export default function Weather() {
     ).then((res) => res.json())
   );
 
-  if (isLoading) return "Loading...";
+  if (isLoading)
+    return (
+      <div>
+        <img src={loadingImage} alt="Loading your data :)" />
+      </div>
+    );
 
   if (error) return "Error" + error.data;
 
