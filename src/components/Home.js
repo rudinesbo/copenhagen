@@ -6,10 +6,10 @@ export default function Home() {
     <div className="home">
       <h1 className="header">COPENHAGEN</h1>
       <Link to="/toilets" className="left-arrow arrow noselect"></Link>
-      <Link to="/toilets" className="toilets-link">
+      <Link to="/toilets" className="left-link">
         Toilets
       </Link>
-      <Link to="/weather" className="weather-link">
+      <Link to="/weather" className="right-link">
         Weather
       </Link>
       <Link to="/weather" className="right-arrow arrow noselect"></Link>

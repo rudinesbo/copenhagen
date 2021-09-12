@@ -33,7 +33,7 @@ export default function App() {
             {({ match }) => (
               <CSSTransition
                 in={match != null}
-                timeout={300}
+                timeout={1000}
                 classNames="page"
                 unmountOnExit
               >
@@ -47,7 +47,7 @@ export default function App() {
             {({ match }) => (
               <CSSTransition
                 in={match != null}
-                timeout={300}
+                timeout={1000}
                 classNames="toilet-page"
                 unmountOnExit
               >
@@ -61,11 +61,11 @@ export default function App() {
             {({ match }) => (
               <CSSTransition
                 in={match != null}
-                timeout={300}
-                classNames="page"
+                timeout={1000}
+                classNames="weather-page"
                 unmountOnExit
               >
-                <div className="page">
+                <div className="weather-page">
                   <Weather />
                 </div>
               </CSSTransition>

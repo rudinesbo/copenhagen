@@ -15,10 +15,11 @@
 
 body {
   font-family: "Spectral", serif;
+
+  overflow: hidden;
 }
 
 .app {
-  overflow: hidden;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -59,9 +60,41 @@ body {
   justify-content: center;
 }
 
+/* Page transition */
+.page {
+  position: absolute;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  transition: opacity 1000ms, transform 1000ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transition: opacity 1000ms, transform 1000ms;
+}
+
 .toilet-page {
   height: 100vh;
   width: 100vw;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,13 +108,13 @@ body {
 }
 
 .toilet-page-enter-active {
-  transform: translateX(calc((100% - 559.6px) / 2));
+  transform: translateX(0);
   -webkit-transform: translateX(0);
   opacity: 1;
-  transition: ease-in transform 300ms, -webkit-transform 300ms, opacity 300ms;
+  transition: ease transform 1000ms, -webkit-transform 1000ms, opacity 1000ms;
 }
 .toilet-page-exit {
-  transform: translateX(calc((100% - 559.6px) / 2));
+  transform: translateX(0);
   -webkit-transform: translateX(0);
   opacity: 1;
 }
@@ -90,32 +123,45 @@ body {
   transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
   opacity: 0;
-  transition: ease-in transform 300ms, -webkit-transform 300ms, opacity 300ms;
+  transition: ease transform 1000ms, -webkit-transform 1000ms, opacity 300ms;
 }
 
-.page-enter {
+.weather-page {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-page-enter {
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
   opacity: 0;
-  transform: scale(1.1);
 }
 
-.page-enter-active {
+.weather-page-enter-active {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
   opacity: 1;
-  transform: scale(1);
-  transition: opacity 300ms, transform 300ms;
+  transition: ease transform 1000ms, -webkit-transform 1000ms, opacity 1000ms;
 }
-
-.page-exit {
+.weather-page-exit {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
   opacity: 1;
-  transform: scale(1);
 }
 
-.page-exit-active {
+.weather-page-exit-active {
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
   opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 300ms, transform 300ms;
+  transition: ease transform 1000ms, -webkit-transform 1000ms, opacity 300ms;
 }
 
-.toilets-link {
+.left-link {
   color: #fafafa;
   text-decoration: none;
   font-size: calc((0.4em + 1vmin) + (0.4em + 1vmax));
@@ -123,7 +169,7 @@ body {
   left: 6vw;
   top: 61vh;
 }
-.weather-link {
+.right-link {
   color: #fafafa;
   text-decoration: none;
   font-size: calc((0.4em + 1vmin) + (0.4em + 1vmax));
@@ -176,4 +222,64 @@ body {
   border-color: #fafafa;
   transform-origin: 100% 0;
   transition: 0.2s ease-in-out;
+}
+
+.weather-card {
+  display: flex;
+  width: 40vw;
+  align-content: space-between;
+  flex-direction: column;
+  background-color: rgb(117, 169, 151);
+  color: #fafafa;
+  border-radius: 10px;
+}
+
+.weather-card-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3vh 5vw 1.5vh 5vw;
+}
+
+.current-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wind-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toilet-card {
+  display: flex;
+  width: 50vw;
+  align-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(117, 169, 151);
+  color: #fafafa;
+  border-radius: 10px;
+  padding: 20px 20px 5px 20px;
+}
+
+.toilet-card p {
+  font-size: 10px;
+  margin-top: 1vh;
+}
+
+.map-container {
+  display: flex;
+}
+
+.toilet-info {
+  width: 30%;
+  padding: 10px;
 }

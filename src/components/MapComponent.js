@@ -26,13 +26,7 @@ export default function MapComponent({ data }) {
 
   return (
     <div className="map-container">
-      <Map
-        height={300}
-        width={"50vw"}
-        center={center}
-        zoom={zoom}
-        zoomSnap={false}
-      >
+      <Map height={300} center={center} zoom={zoom} zoomSnap={false}>
         {data.map(({ geometry, properties, id }) => (
           <Marker
             key={id}
@@ -44,10 +38,11 @@ export default function MapComponent({ data }) {
         ))}
         <ZoomControl />
       </Map>
-      <div>
+      <div className="toilet-info">
         Adresse: {infoText.adresse} <br />
-        Handicap adgang: {infoText.handicapadgang}
         <br />
+        Handicap adgang: {infoText.handicapadgang}
+        <br /> <br />
         Åbningstid i dag: {infoText[today]}
       </div>
     </div>
