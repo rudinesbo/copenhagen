@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/copenhagen/static/css/main.63708757.chunk.css",
+    "main.js": "/copenhagen/static/js/main.12841915.chunk.js",
+    "main.js.map": "/copenhagen/static/js/main.12841915.chunk.js.map",
+    "runtime-main.js": "/copenhagen/static/js/runtime-main.caa1a313.js",
+    "runtime-main.js.map": "/copenhagen/static/js/runtime-main.caa1a313.js.map",
+    "static/js/2.7efd1c4a.chunk.js": "/copenhagen/static/js/2.7efd1c4a.chunk.js",
+    "static/js/2.7efd1c4a.chunk.js.map": "/copenhagen/static/js/2.7efd1c4a.chunk.js.map",
+    "index.html": "/copenhagen/index.html",
+    "static/css/main.63708757.chunk.css.map": "/copenhagen/static/css/main.63708757.chunk.css.map",
+    "static/js/2.7efd1c4a.chunk.js.LICENSE.txt": "/copenhagen/static/js/2.7efd1c4a.chunk.js.LICENSE.txt",
+    "static/media/bike-animated.f6af4639.gif": "/copenhagen/static/media/bike-animated.f6af4639.gif",
+    "static/media/copenhagen_street_16_9.27e25f31.jpg": "/copenhagen/static/media/copenhagen_street_16_9.27e25f31.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.caa1a313.js",
+    "static/js/2.7efd1c4a.chunk.js",
+    "static/css/main.63708757.chunk.css",
+    "static/js/main.12841915.chunk.js"
+  ]
+}
