@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/copenhagen/static/css/main.63708757.chunk.css",
-    "main.js": "/copenhagen/static/js/main.c2e8469e.chunk.js",
-    "main.js.map": "/copenhagen/static/js/main.c2e8469e.chunk.js.map",
+    "main.js": "/copenhagen/static/js/main.b01657a3.chunk.js",
+    "main.js.map": "/copenhagen/static/js/main.b01657a3.chunk.js.map",
     "runtime-main.js": "/copenhagen/static/js/runtime-main.caa1a313.js",
     "runtime-main.js.map": "/copenhagen/static/js/runtime-main.caa1a313.js.map",
     "static/js/2.7494cb44.chunk.js": "/copenhagen/static/js/2.7494cb44.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.caa1a313.js",
     "static/js/2.7494cb44.chunk.js",
     "static/css/main.63708757.chunk.css",
-    "static/js/main.c2e8469e.chunk.js"
+    "static/js/main.b01657a3.chunk.js"
   ]
 }
